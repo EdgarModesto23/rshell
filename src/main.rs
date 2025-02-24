@@ -8,11 +8,7 @@ fn main() {
     // Wait for user input
     let stdin = io::stdin();
     let mut input = String::new();
-    let r = stdin.read_line(&mut input);
-    match r {
-        Ok(_val) => print!("{input}: command not found"),
-        Err(err) => {
-            print!("An error ocurred while reading input: {err}");
-        }
-    }
+    stdin.read_line(&mut input).unwrap();
+
+    print!("{input}: command not found")
 }
