@@ -11,6 +11,10 @@ fn main() {
         let mut input = String::new();
         stdin.read_line(&mut input).unwrap();
         input.pop();
+        let input_list: Vec<&str> = input.split(' ').collect();
+        if input_list[0] == "exit" {
+            std::process::exit(0);
+        }
 
         println!("{}: command not found", input);
     }
