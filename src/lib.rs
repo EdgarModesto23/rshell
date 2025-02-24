@@ -42,7 +42,8 @@ pub mod evaluate {
                     return Box::new(Echo { message });
                 }
                 if input.len() > 2 {
-                    std::process::exit(1)
+                    let message = String::from(input[1..].join(" "));
+                    return Box::new(Echo { message });
                 }
                 Box::new(Echo { message })
             }
