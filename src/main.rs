@@ -11,4 +11,5 @@ fn main() {
     stdin.read_line(&mut input).unwrap();
 
     print!("{input}: command not found");
+    io::stdout().flush().unwrap();
 }
